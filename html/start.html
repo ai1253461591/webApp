@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="author" content="">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="../css/swiper-3.3.1.min .css" />
+		<link rel="stylesheet" type="text/css" href="../css/app.css" />
+		<link rel="stylesheet" type="text/css" href="../css/start.css"/>
+		<title></title>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			var docEl = document.documentElement,
+				resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+				recalc = function() {
+					//设置根字体大小
+					var myfontSize = 20 * (docEl.clientWidth / 320);
+					console.log(myfontSize);
+					if(myfontSize > 30) {
+						docEl.style.fontSize = "30px";
+					}else{
+						docEl.style.fontSize = 20 * (docEl.clientWidth / 320) + 'px';
+					}
+				};
+			//绑定浏览器缩放与加载时间
+			window.addEventListener(resizeEvt, recalc, false);
+			document.addEventListener('DOMContentLoaded', recalc, false);
+		</script>
+		<div id="start_an">
+			<div class="swiper-container">			
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><img src="../img/before-swiper-bg1.png"/></div>
+					<div class="swiper-slide"><img src="../img/before-swiper-bg2.png"/></div>
+					<div class="swiper-slide"><img src="../img/before-swiper-bg3.png"/></div>
+					<div class="swiper-slide">
+						<a href="../index.html" id="start_btn"></a>
+						<img src="../img/before-swiper-bg4.png"/>
+					</div>
+				</div>
+				<!-- 如果需要分页器 -->
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+
+		<script src="../js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/swiper-3.3.1.jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			var mySwiper = new Swiper('.swiper-container', {
+				loop: false,
+				pagination: '.swiper-pagination',
+			})
+		</script>
+	</body>
+
+</html>

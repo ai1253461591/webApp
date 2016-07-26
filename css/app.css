@@ -1,0 +1,59 @@
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img { margin:0; padding:0; } 
+
+fieldset, img { border:none; } 
+
+address, caption, cite, code, dfn, th, var { font-style:normal; font-weight:normal; } 
+
+ul, ol { list-style:none; } 
+
+
+body { color:#000;font:12px/20px "microsoft yahei","宋体","Arial Narrow",HELVETICA; background:#f3f4f6;}
+
+a { color:#666; text-decoration:none; }
+
+body,html{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+header{
+	height: 45px;
+	background: #e4366b;
+	text-align: center;
+}
+
+header a{
+	display: inline-block;
+	vertical-align: middle;
+}
+header span{
+	display: inline-block;
+	height: 100%;
+	width: 0;
+	vertical-align: middle;
+}
+
+#search{
+	height: 45px;
+	width: 100%;
+	background: #52525a;
+	display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

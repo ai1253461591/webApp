@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<img id="img" src=""/>
+		<img id="img2" src=""/>
+		<input type="button" id="btn1" value="用户注册" />
+		<input type="button" id="btn2" value="用户登录" />
+		<input type="button" id="btn3" value="用户信息获取" />
+		<input type="button" id="btn4" value="获取商品分类" />
+		<input type="button" id="btn5" value="获取商品列表" />
+		<input type="button" id="btn6" value="搜索商品" />
+		<input type="button" id="btn7" value="购物车更新" />
+		<input type="button" id="btn8" value="查看购物车" />
+		<input type="button" id="btn9" value="获取首页" />
+	</body>
+	<script src="js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+			//注册
+			$('#btn1').click(function(){
+				var baseUrl = "http://datainfo.duapp.com/shopdata/userinfo.php";
+				var sendDataTest = {
+					status:'register',
+					userID:'20',
+					password:'123456'
+				}
+				sendDataTest = JSON.stringify(sendDataTest);
+				$.ajax({
+					type:"get",
+					url:baseUrl,
+					data:sendDataTest,
+					success:function(msg){
+						console.log(msg)
+					}
+				});
+			});
+			
+			//用户登录
+			$('#btn2').click(function(){
+				var baseUrl = "http://datainfo.duapp.com/shopdata/userinfo.php";
+				var sendDataTest = {
+					status:"login",
+					userID:'7',
+					password:'1234'
+					
+				};
+				sendDataTest = JSON.stringify(sendDataTest);
+				$.ajax({
+					type:"get",
+					url:baseUrl,
+					data:sendDataTest,
+					success:function(msg){
+						console.log(msg)
+					}
+				});
+			});
+			
+			//用户信息获取
+			$('#btn3').click(function(){
+				var baseUrl = "http://datainfo.duapp.com/shopdata/getuser.php";
+				var userIDStr = "userID=" + "7";
+				$.ajax({
+					type:"GET",
+					url:baseUrl,
+					data:userIDStr,
+					dataType: "jsonp",
+					success:function(msg){
+						console.log(msg)
+					}
+				});
+			});
+			
+			//商品分类
+			$('#btn4').click(function(){
+				var baseUrl = "http://datainfo.duapp.com/shopdata/getclass.php";
+				$.ajax({
+					type:"GET",
+					url:baseUrl,
+					success:function(msg){
+						console.log(msg)
+					}
+				});
+			});
+			
+			//商品列表
+			$('#btn5').click(function(){
+				var baseUrl = "http://datainfo.duapp.com/shopdata/getGoods.php";
+				var goodListStr = "";//classID:通过类ID搜索商品，获得列表（可选）goodsID,pageCode,linenumber
+				$.ajax({
+					type:"GET",
+					dataType: "jsonp",
+					url:baseUrl,
+					data:goodListStr,
+					success:function(msg){
+						console.log(msg)
+						$('#img').attr('src',msg[0].goodsListImg);
+						var str=JSON.parse(msg[0].imgsUrl);
+						$('#img2').attr('src',str[0]);
+					}
+				});
+			});
+			
+			//搜索商品
+			$('#btn6').click(function(){
+				var baseUrl = "http://datainfo.duapp.com/shopdata/selectGoodes.php";
+				var sendDataTest = encodeURI("selectText=衬衫");
+				$.ajax({
+					type:"GET",
+					dataType: "jsonp",
+					url:baseUrl,
+					data:sendDataTest,
+					success:function(msg){
+						console.log(msg)
+					}
+				});
+			});
+			
+			//购物车更新
+//			$('#btn7').click(function(){
+//				var baseUrl = " http://datainfo.duapp.com/shopdata/updatecar.php";
+//				var sendDataTest = {
+//					userID="7",
+//					goodsID:"7",
+//					number:'10'
+//				};
+//				sendDataTest = JSON.stringify(sendDataTest);
+//				$.ajax({
+//					type:"GET",
+//					url:baseUrl,
+//					data:sendDataTest,
+//					success:function(msg){
+//						console.log(msg)
+//					}
+//					
+//				});
+//			});
+		});
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</script>
+</html>
