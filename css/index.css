@@ -1,0 +1,105 @@
+#wrapper {
+	position: absolute;
+	top: 95px;
+	bottom: 48px;
+	width: 100%;
+	background-color: green;
+	overflow: hidden;
+}
+
+#scroller ul {
+	list-style: none;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+
+#prdListCon .swiper-container{
+	width: 100%;
+	height: 7rem;
+	border-top: 1px solid #636363;
+	border-bottom: 1px solid #707070;
+}
+#prdListCon .swiper-slide a{
+	display: block;
+	
+}
+#prdListCon .swiper-slide img{
+	width: 100%;
+}
+
+#pr{
+	bottom: 5px;
+}
+
+.prdListItem{
+	display: flex;
+	box-sizing: border-box;
+	padding: 15px 40px 15px 10px;
+	width: 100%;
+	height: auto;
+	border-top: 1px solid #ababab;
+	border-bottom: 1px solid #707070;
+	font-size: .8rem;
+	line-height: 1.2rem;
+}
+
+.prdListItem .prdpic{
+	display: block;
+	width: 5rem;
+	height: 5rem;
+	border: 1px solid #c9c8c6;
+}
+.prdListItem .prdpic img{
+	width: 100%;
+	height: 100%;
+}
+
+.prdMessage{
+	background: #fff;
+	height: 5rem;
+	width: 9rem;
+	overflow: hidden;
+	box-sizing: border-box;
+	padding-left: 10px;
+	position: relative;
+}
+.prdMessage .desc{
+	 width: 100%; 
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.prdMessage .newpic{
+	color: #f42a74;
+	font-size: .8rem;
+}
+
+.prdMessage .oldpic{
+	color: #bbb;
+	font-size: .6rem;
+	text-decoration: line-through;
+}
+.prdMessage .discontent{
+	font-size: .6rem;
+	color: #000;
+}
+.prdMessage #moveBtn{
+	width: 3rem;
+	height: 1.3rem;
+	background: url(../img/trolleyBtn.jpg)0px 0px/cover no-repeat;
+	position: absolute;
+	right: .5rem;
+	bottom: .5rem;
+	border: none;
+	outline: none;
+}
+
+
+
+
+
+
