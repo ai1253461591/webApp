@@ -1,4 +1,7 @@
 //banner
+var myScroll = new IScroll('#wrapper', {
+	click:true,
+})
 
 var baseUrl = "http://datainfo.duapp.com/shopdata/getBanner.php";
 var mySwiper;
@@ -28,7 +31,7 @@ $.ajax({
 			// 如果需要分页器
 			pagination: '.swiper-pagination'
 		})
-
+		myScroll.refresh();
 	}
 });
 //热推
@@ -40,7 +43,7 @@ $.ajax({
 		var shopHtml = "";
 		for(var i = 0; i < data.length; i++) {
 			var newPic =Math.round(data[i].price*data[i].discount/10);
-			shopHtml += '<li class="prdListItem"><a class="prdpic" href="' + 'detal' + data[i].goodsID + '"><img src="' + data[i].goodsListImg + '"></a><div class="prdMessage"><p class="desc">'+data[i].goodsName+'</p><span class="iconfont newpic">&#xe635;'+ newPic +'</span><span class="iconfont oldpic">&#xe635;'+data[i].price+'</span><p class="discontent">'+data[i].discount+'折</p><input type="button" name="moveBtn" id="moveBtn"/>'
+			shopHtml += '<li class="prdListItem"><a class="prdpic" href="html/detail.html?data='+ data[i].goodsID+'"><img src="' + data[i].goodsListImg + '"></a><div class="prdMessage"><p class="desc">'+data[i].goodsName+'</p><span class="iconfont newpic">&#xe635;'+ newPic +'</span><span class="iconfont oldpic">&#xe635;'+data[i].price+'</span><p class="discontent">'+data[i].discount+'折</p><input type="button" name="moveBtn" id="moveBtn"/>'
 		}
 		$('#prdListCon').append(shopHtml);
 		myScroll.refresh();

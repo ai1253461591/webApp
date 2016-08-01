@@ -11,3 +11,137 @@
 section{
 	top: 50px;
 }
+
+section .describePic{
+	height: 55%;
+	padding-bottom: 40px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.describePic img{
+	width: 100%;
+}
+
+.describePic .swiper-slide{
+	overflow: hidden;
+}
+
+.describePic .swiper-pagination{
+	bottom: 0px;
+	left: 50%;
+	margin-left: -35px;
+	background: #bcbcbc;
+	width: auto;
+	display: inline-flex;
+	align-self: center;
+	padding: 15px 10px;
+	border-radius: 20px/20px;
+}
+.swiper-pagination-bullet-active{
+	background: #fff;
+}
+.goodsDesc{
+	padding:10px 20px;
+	height: 32%;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.goodsDesc .goodsTit{
+	display: block;
+	line-height: 40px;
+	height: 40px;
+	font-size: 22px;
+	color: #454545;
+	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.goodsDesc p{
+	height: 40px;
+	line-height: 40px;
+}
+
+.goodsDesc b{
+	color:#ba0957;
+	font-size: 22px;
+}
+
+.goodsDesc p span{
+	padding-left: 20px;
+	font-size: 22px;
+	color: #474546;
+	text-decoration: line-through;
+}
+
+.goodsDesc .sellNumber{
+	font-style: normal;
+	line-height: 40px;
+	height: 40px;
+	font-size: 22px;
+	color: #454545;
+}
+
+.goodsDescMore{
+	height: 13%;
+	font-size: 22px;
+}
+
+.goodsDescMore a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	line-height: 3rem;
+	padding-left: 60px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	background:url(../img/more.gif) 20px center/24px 24px no-repeat,url(../img/rht.gif)90% center/12px auto no-repeat;
+	background-color:#fff ;
+}
+footer{
+	/*display: flex;*/
+	justify-content: center;
+	align-items: center;
+	background:#a3a3a3;
+}
+footer .addCar{
+	display:block;
+	border: 1px solid #920201;
+	height: 80%;
+	width: 70%;
+	background: #9c1414;
+	color: #FFF;
+	font-size: 22px;
+	border-radius: 10px/10px;
+	/*display: inline-flex;*/
+	text-align: center;
+	line-height:1.6rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

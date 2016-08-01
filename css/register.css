@@ -1,0 +1,104 @@
+section{
+	top: 50px;
+}
+
+header{
+	font-size: 22px;
+	line-height: 50px;
+	color: #fff;
+	background: #e4366b;
+}
+.back{
+	display: block;
+	position: absolute;
+	left: 15px;
+	top: 10px;
+	z-index: 3;
+}
+.back img{
+	width: 16px;
+}
+.log{
+	display: block;
+	position: absolute;
+	right: 15px;
+	top: 0px;
+	z-index: 3;
+}
+.log img{
+	width: 84px;
+}
+
+section{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	padding-top: 2.5rem;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+section .loging{
+	width: 80%;
+}
+section input{
+	width: 100%;
+	height: 2rem;
+	box-shadow: .5px .1px 1px gray inset;
+	padding-left: 10px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	border-radius: 10px/10px;
+	font-size: 1rem;
+	outline: none;
+	border: none;
+}
+
+section p{
+	height: 2.5rem;
+	line-height: 2rem;
+	color: red;
+}
+
+.ok{
+	text-align: center;
+	width: 100%;
+	font-size: 14px;
+	color: #000;
+	margin-top: 1rem;
+}
+
+.ok span{
+	display: inline-block;
+	background: #BCBCBC;
+	height: 1rem;
+	line-height: 1rem;
+	padding: 0 .3rem;
+	border-radius: .5rem/.5rem;
+	opacity: 0;
+	color: #111;
+}
+
+
+#regBtn{
+	background: #e53067;
+	color: #fff;
+	box-shadow: 2px 2px 5px gray;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

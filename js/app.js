@@ -1,6 +1,3 @@
-var myScroll = new IScroll('#wrapper', {
-
-})
 var docEl = document.documentElement,
 	resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
 	recalc = function() {
@@ -11,7 +8,6 @@ var docEl = document.documentElement,
 		} else {
 			docEl.style.fontSize = 20 * (docEl.clientWidth / 320) + 'px';
 		}
-		myScroll.refresh();
 	};
 
 //绑定浏览器缩放与加载时间

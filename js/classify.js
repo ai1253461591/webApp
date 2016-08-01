@@ -24,7 +24,7 @@ $.ajax({
 				//			$('#classifyNav .swiper-slide').eq(i).html(fontStyle);
 				//			console.log(fontStyle)
 			classifyNavItem += '<div class="swiper-slide iconfont">' + fontStyle + '</div>';
-			classifyWrap += '<div class="swiper-slide"> <div class="swiper-container item' + i + '"> <div class="swiper-wrapper"> <div class="swiper-slide content">2</div></div></div></div>'
+			classifyWrap += '<div class="swiper-slide"> <div class="swiper-container item' + i + '"> <div class="swiper-wrapper"> <div class="swiper-slide content"></div></div></div></div>'
 		}
 		//		console.log(arrayClassId)
 		$('#classifyNav .swiper-wrapper').html(classifyNavItem);
